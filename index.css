@@ -1,0 +1,283 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+
+  /* Swervy Cares Custom Colors - Pink Purple Blue Aura Theme */
+  --swervy-pink: hsl(320, 100%, 70%);
+  --swervy-light-pink: hsl(315, 100%, 80%);
+  --swervy-pale-pink: hsl(310, 100%, 92%);
+  --swervy-purple: hsl(280, 100%, 70%);
+  --swervy-light-purple: hsl(270, 100%, 80%);
+  --swervy-blue: hsl(240, 100%, 70%);
+  --swervy-light-blue: hsl(220, 100%, 80%);
+  --swervy-turquoise: hsl(174, 72%, 56%);
+  --swervy-teal: hsl(162, 73%, 46%);
+  --swervy-coral: hsl(320, 100%, 70%);
+  --swervy-coral-light: hsl(315, 100%, 80%);
+  --swervy-coral-bright: hsl(280, 100%, 70%);
+  --swervy-peach: hsl(270, 100%, 80%);
+  --swervy-sunset: hsl(240, 100%, 70%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .swervy-pink {
+    color: var(--swervy-pink);
+  }
+  
+  .bg-swervy-pink {
+    background-color: var(--swervy-pink);
+  }
+  
+  .swervy-light-pink {
+    color: var(--swervy-light-pink);
+  }
+  
+  .bg-swervy-light-pink {
+    background-color: var(--swervy-light-pink);
+  }
+  
+  .swervy-pale-pink {
+    color: var(--swervy-pale-pink);
+  }
+  
+  .bg-swervy-pale-pink {
+    background-color: var(--swervy-pale-pink);
+  }
+  
+  .swervy-turquoise {
+    color: var(--swervy-turquoise);
+  }
+  
+  .bg-swervy-turquoise {
+    background-color: var(--swervy-turquoise);
+  }
+  
+  .swervy-teal {
+    color: var(--swervy-teal);
+  }
+  
+  .bg-swervy-teal {
+    background-color: var(--swervy-teal);
+  }
+  
+  .swervy-coral {
+    color: var(--swervy-coral);
+  }
+  
+  .bg-swervy-coral {
+    background-color: var(--swervy-coral);
+  }
+  
+  .swervy-coral-light {
+    color: var(--swervy-coral-light);
+  }
+  
+  .bg-swervy-coral-light {
+    background-color: var(--swervy-coral-light);
+  }
+  
+  .swervy-coral-bright {
+    color: var(--swervy-coral-bright);
+  }
+  
+  .bg-swervy-coral-bright {
+    background-color: var(--swervy-coral-bright);
+  }
+  
+  .swervy-peach {
+    color: var(--swervy-peach);
+  }
+  
+  .bg-swervy-peach {
+    background-color: var(--swervy-peach);
+  }
+  
+  .swervy-sunset {
+    color: var(--swervy-sunset);
+  }
+  
+  .bg-swervy-sunset {
+    background-color: var(--swervy-sunset);
+  }
+}
+
+/* Custom animations - Magical Pink Aura Theme */
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(30px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes bounceGentle {
+  0%, 20%, 50%, 80%, 100% { 
+    transform: translateY(0); 
+  }
+  40% { 
+    transform: translateY(-5px); 
+  }
+  60% { 
+    transform: translateY(-3px); 
+  }
+}
+
+@keyframes pulseSoft {
+  0%, 100% { 
+    opacity: 1; 
+  }
+  50% { 
+    opacity: 0.7; 
+  }
+}
+
+@keyframes auraFloat {
+  0%, 100% { 
+    transform: translateY(0px) scale(1);
+    opacity: 0.3;
+  }
+  50% { 
+    transform: translateY(-10px) scale(1.05);
+    opacity: 0.5;
+  }
+}
+
+@keyframes shimmer {
+  0% { 
+    background-position: -200% 0;
+  }
+  100% { 
+    background-position: 200% 0;
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.4s ease-out;
+}
+
+.animate-bounce-gentle {
+  animation: bounceGentle 2s infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulseSoft 2s infinite;
+}
+
+.animate-aura-float {
+  animation: auraFloat 4s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s linear infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 1.5s ease-in-out infinite;
+}
+
+/* Glass effect */
+.glass-effect {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Chat bubble styles */
+.chat-bubble-user {
+  background: linear-gradient(135deg, var(--swervy-pink), hsl(325, 100%, 55%));
+  border-radius: 18px 18px 4px 18px;
+}
+
+.chat-bubble-ai {
+  background: linear-gradient(135deg, var(--swervy-turquoise), var(--swervy-teal));
+  border-radius: 18px 18px 18px 4px;
+}
